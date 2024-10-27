@@ -26,6 +26,9 @@ public class Index extends Application {
 		// Créer une image 
 		Image im1 = new Image(getClass().getResourceAsStream("/Images/logo.png"));
 		ImageView imView = new ImageView(im1);
+		// Propriétés de l'image
+		imView.setFitWidth(30);
+        	imView.setFitHeight(30);
 		// Propriétés du label
 		label.setGraphic(imView);
 		label.setGraphicTextGap(50);
