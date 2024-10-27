@@ -1,0 +1,14 @@
+/*Label Craigslist */
+.label {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 24px; 
+    -fx-font-weight: bold;
+}
+
+/*Bouton ajouter une annonce*/
+.button {
+    -fx-background-color: #7f00ff;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: "Calibri";
+}
