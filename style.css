@@ -1,6 +1,6 @@
 /*Fond*/
 .background {
-	-fx-background-color: #Ebd0ef;
+	-fx-background-color: #ebd0ef;
 }
 
 /*Label Craigslist*/
@@ -11,6 +11,17 @@
     -fx-font-family: "Calibri";
 }
 
+/*Barre de recherche*/
+.searchfield {
+    -fx-font-size: 18px;
+    -fx-background-color: white;
+	-fx-border-color: black;
+	-fx-border-width: 1px;   
+	-fx-border-style: solid;  
+	-fx-background-radius: 10px;
+	-fx-border-radius: 10px;
+}
+
 /*Fond barre de navigation*/
 .backgroundbarre {
 	-fx-background-color: white;
@@ -19,8 +30,8 @@
 /*Labels barre de navigation*/
 .labelbarre {
 	-fx-text-fill: #8c52ff;
-    -fx-font-size: 30px; 
-    -fx-font-weight: bold;
+    	-fx-font-size: 30px; 
+    	-fx-font-weight: bold;
 	-fx-font-family: "Calibri";
 }
 
@@ -29,5 +40,6 @@
     -fx-background-color: #8c52ff;
     -fx-text-fill: black;
     -fx-font-size: 20px;
+    -fx-font-weight: bold;
     -fx-font-family: "Calibri";
 }
