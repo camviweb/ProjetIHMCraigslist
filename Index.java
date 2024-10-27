@@ -12,6 +12,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Index extends Application {
+	@Override
+	
 	public void start(Stage primaryStage) {
 		// Créer un conteneur VBox
 		VBox root1 = new VBox(5);
