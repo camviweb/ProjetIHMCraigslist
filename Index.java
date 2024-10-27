@@ -30,6 +30,7 @@ public class Index extends Application {
 		imView.setFitWidth(30);
         	imView.setFitHeight(30);
 		// Propriétés du label
+		label.getStyleClass().add("label");
 		label.setGraphic(imView);
 		label.setGraphicTextGap(50);
 		label.setContentDisplay(ContentDisplay.LEFT);
@@ -40,6 +41,7 @@ public class Index extends Application {
 		// Créer la scène
 		Scene scene = new Scene(root1, 1500, 700);
 		// Configurer la scène principale
+		scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		primaryStage.setTitle("Craigslist");
 		// Mettre la scène dans le stage
 		primaryStage.setScene(scene);
