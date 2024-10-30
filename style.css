@@ -3,7 +3,7 @@
 	-fx-background-color: #ebd0ef;
 }
 
-/*Label Craigslist*/
+/*Label titre*/
 .labeltitre {
     -fx-text-fill: black;
     -fx-font-size: 50px; 
@@ -39,7 +39,19 @@
 .addbutton {
     -fx-background-color: #8c52ff;
     -fx-text-fill: black;
-    -fx-font-size: 20px;
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
     -fx-font-family: "Calibri";
+}
+
+/*Fond footer*/
+.backgroundfooter {
+	-fx-background-color: black;
+}
+
+/*Labels footer*/
+.labelfooter {
+	-fx-text-fill: white;
+    -fx-font-size: 15px; 
+	-fx-font-family: "Calibri";
 }
