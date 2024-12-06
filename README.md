@@ -55,6 +55,7 @@ Une **analyse de données** sera également réalisée sur la section **forum** 
 ```bash
 git clone https://github.com/camviweb/ProjetIHMCraigslist.git
 
+---
 ## **Rôles de l'équipe**
 
 - **Cheffe de projet** : Supervision, planification, et suivi de l’avancement.
