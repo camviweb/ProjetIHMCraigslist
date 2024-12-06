@@ -18,7 +18,7 @@ import javafx.scene.image.ImageView;
 
 public class View{
 
-	public void View(Stage primaryStage) {
+	public View(Stage primaryStage) {
 		
 		// Créer le conteneur VBox principal
 		VBox root1 = new VBox(5);
