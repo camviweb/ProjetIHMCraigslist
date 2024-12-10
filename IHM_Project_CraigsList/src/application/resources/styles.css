@@ -1,0 +1,271 @@
+/* Style pour l'en-tête */
+.header {
+    -fx-background-color: #EBD1EF; /* Violet */
+}
+
+/* Style pour le titre "CraigsList" */
+.title {
+    -fx-font-family: "TT Fors"; /* Police */
+    -fx-font-size: 40px;       /* Taille de la police */
+    -fx-font-weight: bold;     /* Gras */
+    -fx-text-fill: black;      /* Couleur du texte */
+}
+
+/* Barre de recherche */
+.searchfield {
+    -fx-font-size: 18px;           /* Taille du texte */
+    -fx-background-color: white;  /* Couleur de fond */
+    -fx-border-color: black;      /* Couleur des bordures */
+    -fx-border-width: 1px;        /* Épaisseur des bordures */
+    -fx-border-style: solid;      /* Style des bordures */
+    -fx-background-radius: 0px;   /* Pas de coins arrondis */
+    -fx-border-radius: 0px;       /* Pas de coins arrondis */
+    -fx-pref-width: 400px;        /* Largeur de la barre de recherche */
+    -fx-pref-height: 40px;        /* Hauteur de la barre de recherche */
+}
+
+/* Bouton de recherche */
+.search-button {
+    -fx-font-size: 18px;          /* Taille du texte/icone */
+    -fx-background-color: white; /* Couleur de fond */
+    -fx-border-color: black;     /* Couleur des bordures */
+    -fx-border-width: 1px;       /* Épaisseur des bordures */
+    -fx-border-style: solid;     /* Style des bordures */
+    -fx-background-radius: 0px;  /* Pas de coins arrondis */
+    -fx-border-radius: 0px;      /* Pas de coins arrondis */
+    -fx-pref-width: 50px;        /* Largeur du bouton */
+    -fx-pref-height: 40px;       /* Hauteur du bouton */
+    -fx-cursor: hand;            /* Curseur en forme de main au survol */
+}
+
+/* Effet au survol du bouton */
+.search-button:hover {
+    -fx-background-color: #f0f0f0; /* Couleur de fond au survol */
+}
+
+/* Barre de navigation */
+.navbar {
+    -fx-background-color: white; /* Fond blanc */
+    -fx-padding: 10px 0;         /* Espacement interne */
+    -fx-alignment: center;       /* Centrage des éléments */
+}
+
+/* Boutons des sections */
+.nav-button {
+    -fx-background-color: white;     /* Fond blanc */
+    -fx-text-fill: #8C52FF;          /* Texte violet */
+    -fx-font-family: "TT Fors";      /* Police TT Fors */
+    -fx-font-size: 18px;             /* Taille du texte */
+    -fx-font-weight: bold;           /* Texte en gras */
+    -fx-border-width: 0;             /* Pas de bordure */
+    -fx-padding: 10;                /* Espacement interne */
+    -fx-cursor: hand;                /* Curseur en main au survol */
+    -fx-alignment: center;           /* Centrage du texte */
+}
+
+
+
+.nav-button-active {
+    -fx-background-color: #8C52FF;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+	-fx-font-family: "TT Fors";   
+	-fx-border-width: 0; 
+	-fx-padding: 10;  
+}
+
+
+/* Effet de survol des boutons */
+.nav-button:hover {
+    -fx-background-color: #8C52FF;   /* Fond violet */
+    -fx-text-fill: white;            /* Texte blanc */
+}
+
+/* Footer */
+.footer {
+    -fx-background-color: black;  /* Fond noir */
+    -fx-padding: 10px 0;          /* Espacement interne */
+    -fx-alignment: center;        /* Centrage des éléments */
+}
+
+/* Boutons du footer */
+.footer-button {
+    -fx-background-color: black; /* Fond noir */
+    -fx-text-fill: white;        /* Texte blanc */
+    -fx-font-family: "Arial";    /* Police Arial (modifiez si nécessaire) */
+    -fx-font-size: 14px;         /* Taille du texte */
+    -fx-border-width: 0;         /* Pas de bordure */
+    -fx-padding: 5px;            /* Espacement interne */
+    -fx-cursor: hand;            /* Curseur en main au survol */
+    -fx-alignment: center;       /* Centrage du texte */
+}
+
+
+
+/* Style général */
+.root {
+    -fx-font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    -fx-background-color: #EBD1EF;
+    -fx-padding: 10px;
+}
+
+/* Navigation */
+.navbar {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-border-color: black;
+}
+
+/* Zone principale */
+
+/* Style pour les titres des thèmes */
+.theme-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white; /* Texte en blanc */
+    -fx-background-color: #8C52FF; /* Fond violet */
+    -fx-padding: 15px; /* Espacement interne */
+    -fx-font-family: 'TT Fors'; /* Police personnalisée */
+    -fx-alignment: center-left; /* Alignement à gauche */
+}
+
+
+
+.forum-row {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+}
+
+/* Style pour le titre principal */
+.main-title {
+    -fx-font-size: 70px; /* Grande taille */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: black; /* Texte en noir */
+    -fx-font-family: 'TT Fors'; /* Police personnalisée */
+}
+
+/* Style pour le sous-titre */
+.subtitle {
+    -fx-font-size: 18px; /* Taille standard */
+    -fx-text-fill: black; /* Texte en noir */
+    -fx-font-family: 'TT Fors'; /* Police personnalisée */
+}
+
+/* Style pour le bouton de discussion */
+.discussion-button {
+    -fx-font-size: 20px; /* Taille augmentée */
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #8C52FF; /* Couleur de fond violette */
+    -fx-padding: 15px; /* Marges internes pour agrandir */
+    -fx-border-radius: 0px; /* Coins carrés */
+    -fx-background-radius: 0px; /* Coins carrés */
+    -fx-font-family: 'TT Fors';
+}
+
+/* Style pour le bouton au survol */
+.discussion-button-hover {
+    -fx-font-size: 20px; /* Taille constante */
+    -fx-font-weight: bold;
+    -fx-text-fill: #8C52FF; /* Texte violet */
+    -fx-background-color: white; /* Fond blanc */
+    -fx-padding: 15px; /* Même taille pour éviter les sauts */
+    -fx-border-radius: 0px; /* Coins carrés */
+    -fx-background-radius: 0px; /* Coins carrés */
+    -fx-font-family: 'TT Fors';
+}
+
+
+/* Footer */
+.footer {
+    -fx-background-color: black;
+    -fx-padding: 10px;
+}
+
+.footer-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+.scroll-pane {
+    -fx-background: #EBD1EF; /* Couleur de fond */
+    -fx-padding: 10px;
+}
+
+.scroll-pane .viewport {
+    -fx-background: #EBD1EF; /* Fond du contenu visible */
+}
+
+
+/* Style général pour le contenu principal */
+.main-content {
+    -fx-background-color: #EBD1EF; /* Fond violet clair */
+    -fx-padding: 100px; /* Espacement autour du contenu */
+    -fx-spacing: 40px; /* Espacement entre les éléments */
+}
+
+/* Style pour la section gauche contenant l'image */
+.left-box {
+    -fx-alignment: center; /* Centre l'image verticalement et horizontalement */
+    -fx-padding: 0; /* Pas de marge supplémentaire */
+}
+
+
+
+/* Page d'accueil - Style pour l'image principale */
+.main-image {
+    -fx-fit-width: 700px; /* Largeur ajustée */
+    -fx-preserve-ratio: true; /* Conserve le ratio de l'image */
+}
+
+/* Style pour la section droite contenant le texte et le bouton */
+.right-box {
+    -fx-alignment: center; /* Centre les éléments verticalement */
+    -fx-spacing: 35px; /* Espacement vertical entre le titre et le bouton */
+    -fx-padding: 0; /* Pas de marge supplémentaire */
+}
+
+/* Style pour le titre principal */
+.main-title {
+    -fx-font-size: 50px; /* Taille de la police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-text-fill: black; /* Couleur noire */
+    -fx-wrap-text: true; /* Permet de retourner à la ligne si nécessaire */
+    -fx-max-width: 800px;
+	-fx-font-family: "TT Fors"; /* Largeur maximale */
+}
+
+/* Style pour le bouton d'action */
+.action-button {
+    -fx-font-size: 22px; /* Taille de la police */
+    -fx-background-color: #8C52FF; /* Couleur de fond violette */
+    -fx-text-fill: black; /* Couleur du texte en noir */
+    -fx-font-family: "TT Fors"; /* Police TT Fors */
+    -fx-padding: 10px 20px; /* Marges internes */
+    -fx-cursor: hand; /* Curseur en forme de main au survol */
+    -fx-border-radius: 5px; /* Coins légèrement arrondis */
+    -fx-background-radius: 5px; /* Fond avec coins arrondis */
+	-fx-font-weight: bold;
+	-fx-min-width: 400px; /* Largeur minimale pour rendre le bouton plus large */
+	-fx-min-height: 10px;
+}
+
+/* Effet au survol du bouton */
+.action-button:hover {
+    -fx-background-color: #A678FF; /* Couleur légèrement plus claire au survol */
+}
+
+/* Style pour le conteneur central divisant la page */
+.central-box {
+    -fx-spacing: 100px; /* Espacement horizontal entre les colonnes */
+    -fx-alignment: center; /* Centre les colonnes */
+    -fx-padding: 20px; /* Espacement interne */
+}
+
