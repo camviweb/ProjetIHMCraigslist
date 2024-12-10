@@ -36,12 +36,12 @@ Une **analyse de données** sera également réalisée sur la section **forum** 
 
 ### Répertoires clés :
 - `/src` : Contient le code source du projet.
-- `/images` : Ressources visuelles pour l'interface.
+- `/img` : Ressources visuelles pour l'interface.
 - `/data` : Fichiers et scripts pour l’analyse des forums (à venir).
 
 ### Fichiers principaux :
-- `Main.java` : Point d’entrée du projet.
-- `HelloFX.java` : Gestion de l'interface utilisateur de la page d’accueil.
+- `MainApp.java` : Point d’entrée du projet.
+- `HomeView.java` : Gestion de l'interface utilisateur de la page d’accueil.
 
 ---
 
@@ -51,10 +51,6 @@ Une **analyse de données** sera également réalisée sur la section **forum** 
 - **Java 17+** installé sur votre machine.
 - **Eclipse IDE** configuré pour les projets JavaFX.
 
-### **Cloner le projet :**
-```bash
-git clone https://github.com/camviweb/ProjetIHMCraigslist.git
-```
 ---
 ## **Rôles de l'équipe**
 
