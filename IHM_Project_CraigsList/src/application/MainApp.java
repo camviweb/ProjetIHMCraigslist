@@ -18,6 +18,8 @@ public class MainApp extends Application {
         // Création des vues
         final HomeView homeView = new HomeView();
         final ForumView forumView = new ForumView();
+        final ArticlesView articlesView = new ArticlesView();
+        final ProduitView produitView = new ProduitView(); 
 
         // Conteneur principal (StackPane pour changer les vues)
         rootPane = new StackPane();
@@ -35,6 +37,25 @@ public class MainApp extends Application {
                             rootPane.getChildren().add(createForumScrollPane(forumView));
                         }
                     });
+                }
+                if (navButton.getText().equalsIgnoreCase("À Vendre")) {
+                    navButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+                    	
+                        @Override
+                        public void handle(javafx.event.ActionEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(createArticlesScrollPane(articlesView));
+                        }
+                    });
+                    if (articlesView.getButton() != null && articlesView.getButton() instanceof Button ) {
+                    	Button produitButton = (Button) articlesView.getButton();
+                        if (produitButton.getText().equalsIgnoreCase("Pendentif Coeur \n5€")) {
+                        	produitButton.setOnAction(event -> {
+                        		rootPane.getChildren().clear();
+                                rootPane.getChildren().add(createProduitScrollPane(produitView));
+                        	});
+                        }
+                    }
                 }
             }
         }
@@ -57,6 +78,36 @@ public class MainApp extends Application {
             forumView.getNavHBox(),
             forumView.getMainContent(),
             forumView.getFooter()
+        );
+
+        ScrollPane scrollPane = new ScrollPane(forumLayout);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        return scrollPane;
+    }
+
+    private ScrollPane createArticlesScrollPane(ArticlesView articlesView) {
+        VBox forumLayout = new VBox(
+        	articlesView.getTopHBox(),
+            articlesView.getNavHBox(),
+            articlesView.getMainContent(),
+            articlesView.getFooter()
+        );
+
+        ScrollPane scrollPane = new ScrollPane(forumLayout);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        return scrollPane;
+    }
+    
+    private ScrollPane createProduitScrollPane(ProduitView produitView) {
+        VBox forumLayout = new VBox(
+        	produitView.getTopHBox(),
+            produitView.getNavHBox(),
+            produitView.getMainContent(),
+            produitView.getFooter()
         );
 
         ScrollPane scrollPane = new ScrollPane(forumLayout);
