@@ -202,7 +202,7 @@ public class ArticlesView {
 		
 		//Creation des images des produits avec leurs description
 		VBox box1 = new VBox();
-		Image image1 = new Image(getClass().getResourceAsStream("/application/img/img1.png"));
+		Image image1 = new Image(getClass().getResourceAsStream("/application/img/article1.png"));
 		ImageView imageView1 = new ImageView(image1);
 		btnImage1 = new Button("Pendentif Coeur \n5€");
 		btnImage1.getStyleClass().add("button-articles");
@@ -210,7 +210,7 @@ public class ArticlesView {
 		box1.getChildren().addAll(imageView1, btnImage1);
 	
 		VBox box2 = new VBox();
-		Image image2 = new Image(getClass().getResourceAsStream("/application/img/img2.png"));
+		Image image2 = new Image(getClass().getResourceAsStream("/application/img/article2.png"));
 		ImageView imageView2 = new ImageView(image2);
 		Button btnImage2 = new Button("Sony PlayStation (PS5) \n350€");
 		btnImage2.getStyleClass().add("button-articles");
@@ -218,7 +218,7 @@ public class ArticlesView {
 		box2.getChildren().addAll(imageView2, btnImage2);
 		
 		VBox box3 = new VBox();
-		Image image3 = new Image(getClass().getResourceAsStream("/application/img/img3.png"));
+		Image image3 = new Image(getClass().getResourceAsStream("/application/img/article3.png"));
 		ImageView imageView3= new ImageView(image3);
 		Button btnImage3 = new Button("Replica - Eau de parfum \n100€");
 		btnImage3.getStyleClass().add("button-articles");
