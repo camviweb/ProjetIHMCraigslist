@@ -25,7 +25,7 @@ public class MainApp extends Application {
         rootPane = new StackPane();
         rootPane.getChildren().add(homeView.getMainLayout()); // Charger HomeView par défaut
 
-        // Gestion de la navigation vers ForumView depuis HomeView
+        // Gestion de la navigation vers les pages depuis HomeView
         for (int i = 0; i < homeView.getNavHBox().getChildren().size(); i++) {
             if (homeView.getNavHBox().getChildren().get(i) instanceof Button) {
                 Button navButton = (Button) homeView.getNavHBox().getChildren().get(i);
@@ -60,8 +60,8 @@ public class MainApp extends Application {
             }
         }
 
-        // Gestion de la redirection vers HomeView depuis ForumView
-        addCraigsListNavigation(homeView, forumView);
+        // Gestion de la redirection
+        addCraigsListNavigation(homeView, forumView, articlesView, produitView);
 
         // Création de la scène principale
         Scene scene = new Scene(rootPane, 1000, 700);
@@ -117,7 +117,7 @@ public class MainApp extends Application {
         return scrollPane;
     }
 
-    private void addCraigsListNavigation(HomeView homeView, ForumView forumView) {
+    private void addCraigsListNavigation(HomeView homeView, ForumView forumView, ArticlesView articlesView, ProduitView produitView) {
         // Redirection depuis HomeView
         for (int i = 0; i < homeView.getTopHBox().getChildren().size(); i++) {
             if (homeView.getTopHBox().getChildren().get(i) instanceof Label) {
@@ -144,6 +144,91 @@ public class MainApp extends Application {
                         public void handle(javafx.scene.input.MouseEvent event) {
                             rootPane.getChildren().clear();
                             rootPane.getChildren().add(homeView.getMainLayout());
+                        }
+                    });
+                }
+            }
+        }
+        for (int i = 0; i < forumView.getNavHBox().getChildren().size(); i++) {
+            if (forumView.getNavHBox().getChildren().get(i) instanceof Button) {
+                Button navButton = (Button) forumView.getNavHBox().getChildren().get(i);
+                if (navButton.getText().equalsIgnoreCase("À Vendre")) {
+                    navButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+                    	
+                        @Override
+                        public void handle(javafx.event.ActionEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(createArticlesScrollPane(articlesView));
+                        }
+                    });
+                }
+            }
+        }
+        
+        // Redirection depuis ArticlesView
+        for (int i = 0; i < articlesView.getTopHBox().getChildren().size(); i++) {
+            if (articlesView.getTopHBox().getChildren().get(i) instanceof Label) {
+                Label titleLabel = (Label) articlesView.getTopHBox().getChildren().get(i);
+                if (titleLabel.getText().equalsIgnoreCase("CraigsList")) {
+                    titleLabel.setOnMouseClicked(new javafx.event.EventHandler<javafx.scene.input.MouseEvent>() {
+                        @Override
+                        public void handle(javafx.scene.input.MouseEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(homeView.getMainLayout());
+                        }
+                    });
+                }
+            }
+        }
+        for (int i = 0; i < articlesView.getNavHBox().getChildren().size(); i++) {
+            if (articlesView.getNavHBox().getChildren().get(i) instanceof Button) {
+                Button navButton = (Button) articlesView.getNavHBox().getChildren().get(i);
+                if (navButton.getText().equalsIgnoreCase("Forums")) {
+                    navButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+                        @Override
+                        public void handle(javafx.event.ActionEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(createForumScrollPane(forumView));
+                        }
+                    });
+                }
+            }
+        }
+       
+        // Redirection depuis ProduitView
+        for (int i = 0; i < produitView.getTopHBox().getChildren().size(); i++) {
+            if (produitView.getTopHBox().getChildren().get(i) instanceof Label) {
+                Label titleLabel = (Label) produitView.getTopHBox().getChildren().get(i);
+                if (titleLabel.getText().equalsIgnoreCase("CraigsList")) {
+                    titleLabel.setOnMouseClicked(new javafx.event.EventHandler<javafx.scene.input.MouseEvent>() {
+                        @Override
+                        public void handle(javafx.scene.input.MouseEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(homeView.getMainLayout());
+                        }
+                    });
+                }
+            }
+        }
+        for (int i = 0; i < produitView.getNavHBox().getChildren().size(); i++) {
+            if (produitView.getNavHBox().getChildren().get(i) instanceof Button) {
+                Button navButton = (Button) produitView.getNavHBox().getChildren().get(i);
+                if (navButton.getText().equalsIgnoreCase("Forums")) {
+                    navButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+                        @Override
+                        public void handle(javafx.event.ActionEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(createForumScrollPane(forumView));
+                        }
+                    });
+                }
+                if (navButton.getText().equalsIgnoreCase("À Vendre")) {
+                    navButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+                    	
+                        @Override
+                        public void handle(javafx.event.ActionEvent event) {
+                            rootPane.getChildren().clear();
+                            rootPane.getChildren().add(createArticlesScrollPane(articlesView));
                         }
                     });
                 }
