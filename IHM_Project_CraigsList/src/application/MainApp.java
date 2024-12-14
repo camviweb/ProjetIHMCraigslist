@@ -88,14 +88,14 @@ public class MainApp extends Application {
     }
 
     private ScrollPane createArticlesScrollPane(ArticlesView articlesView) {
-        VBox forumLayout = new VBox(
+        VBox articlesLayout = new VBox(
         	articlesView.getTopHBox(),
             articlesView.getNavHBox(),
             articlesView.getMainContent(),
             articlesView.getFooter()
         );
 
-        ScrollPane scrollPane = new ScrollPane(forumLayout);
+        ScrollPane scrollPane = new ScrollPane(articlesLayout);
         scrollPane.setFitToWidth(true);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
@@ -103,14 +103,14 @@ public class MainApp extends Application {
     }
     
     private ScrollPane createProduitScrollPane(ProduitView produitView) {
-        VBox forumLayout = new VBox(
+        VBox produitLayout = new VBox(
         	produitView.getTopHBox(),
             produitView.getNavHBox(),
             produitView.getMainContent(),
             produitView.getFooter()
         );
 
-        ScrollPane scrollPane = new ScrollPane(forumLayout);
+        ScrollPane scrollPane = new ScrollPane(produitLayout);
         scrollPane.setFitToWidth(true);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
