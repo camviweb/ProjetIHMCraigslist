@@ -166,7 +166,7 @@ public class HomeView {
 
         // Section gauche : Image
         VBox leftBox = new VBox();
-        Image mainImage = new Image(getClass().getResourceAsStream("/application/img/dressing.png")); 
+        Image mainImage = new Image(getClass().getResourceAsStream("/application/img/home_page_photo.png")); 
         ImageView mainImageView = new ImageView(mainImage);
         mainImageView.setFitWidth(700); // Largeur ajustée
         mainImageView.setPreserveRatio(true);
