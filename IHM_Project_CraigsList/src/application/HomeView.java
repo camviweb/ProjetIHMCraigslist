@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -39,14 +40,6 @@ public class HomeView {
     }
     public HBox getFooter() {
         return footer;
-    }
-
-    public VBox getMainLayout() {
-        VBox layout = new VBox();
-        layout.getChildren().addAll(topHBox, navHBox, mainContent, footer);
-        layout.setSpacing(0); // Espacement entre les sections
-        layout.setPadding(new Insets(0)); // Marges autour du layout
-        return layout;
     }
 
     // Méthode pour créer l'en-tête (top box)
@@ -168,7 +161,7 @@ public class HomeView {
         VBox leftBox = new VBox();
         Image mainImage = new Image(getClass().getResourceAsStream("/application/img/home_page_photo.png")); 
         ImageView mainImageView = new ImageView(mainImage);
-        mainImageView.setFitWidth(700); // Largeur ajustée
+        mainImageView.setFitWidth(400); // Largeur ajustée
         mainImageView.setPreserveRatio(true);
 
         leftBox.getChildren().add(mainImageView);
