@@ -23,7 +23,7 @@ public class MainApp extends Application {
 
         // Conteneur principal (StackPane pour changer les vues)
         rootPane = new StackPane();
-        rootPane.getChildren().add(homeView.getMainLayout()); // Charger HomeView par défaut
+        rootPane.getChildren().add(createHomeScrollPane(homeView)); // Charger HomeView par défaut
 
         // Gestion de la navigation vers les pages depuis HomeView
         for (int i = 0; i < homeView.getNavHBox().getChildren().size(); i++) {
@@ -60,7 +60,8 @@ public class MainApp extends Application {
             }
         }
 
-        // Gestion de la redirection
+
+        // Gestion de la redirection vers HomeView depuis ForumView
         addCraigsListNavigation(homeView, forumView, articlesView, produitView);
 
         // Création de la scène principale
@@ -70,6 +71,22 @@ public class MainApp extends Application {
         primaryStage.setTitle("CraigsList Interface");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    
+    private ScrollPane createHomeScrollPane(HomeView homeView) {
+        VBox forumLayout = new VBox(
+        	homeView.getTopHBox(),
+            homeView.getNavHBox(),
+            homeView.getMainContent(),
+            homeView.getFooter()
+        );
+
+        ScrollPane scrollPane = new ScrollPane(forumLayout);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        return scrollPane;
     }
 
     private ScrollPane createForumScrollPane(ForumView forumView) {
@@ -86,16 +103,16 @@ public class MainApp extends Application {
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         return scrollPane;
     }
-
+    
     private ScrollPane createArticlesScrollPane(ArticlesView articlesView) {
-        VBox articlesLayout = new VBox(
+        VBox forumLayout = new VBox(
         	articlesView.getTopHBox(),
             articlesView.getNavHBox(),
             articlesView.getMainContent(),
             articlesView.getFooter()
         );
 
-        ScrollPane scrollPane = new ScrollPane(articlesLayout);
+        ScrollPane scrollPane = new ScrollPane(forumLayout);
         scrollPane.setFitToWidth(true);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
@@ -103,14 +120,14 @@ public class MainApp extends Application {
     }
     
     private ScrollPane createProduitScrollPane(ProduitView produitView) {
-        VBox produitLayout = new VBox(
+        VBox forumLayout = new VBox(
         	produitView.getTopHBox(),
             produitView.getNavHBox(),
             produitView.getMainContent(),
             produitView.getFooter()
         );
 
-        ScrollPane scrollPane = new ScrollPane(produitLayout);
+        ScrollPane scrollPane = new ScrollPane(forumLayout);
         scrollPane.setFitToWidth(true);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
@@ -127,7 +144,7 @@ public class MainApp extends Application {
                         @Override
                         public void handle(javafx.scene.input.MouseEvent event) {
                             rootPane.getChildren().clear();
-                            rootPane.getChildren().add(homeView.getMainLayout());
+                            rootPane.getChildren().add(createHomeScrollPane(homeView));
                         }
                     });
                 }
@@ -143,12 +160,13 @@ public class MainApp extends Application {
                         @Override
                         public void handle(javafx.scene.input.MouseEvent event) {
                             rootPane.getChildren().clear();
-                            rootPane.getChildren().add(homeView.getMainLayout());
+                            rootPane.getChildren().add(createHomeScrollPane(homeView));
                         }
                     });
                 }
             }
         }
+        
         for (int i = 0; i < forumView.getNavHBox().getChildren().size(); i++) {
             if (forumView.getNavHBox().getChildren().get(i) instanceof Button) {
                 Button navButton = (Button) forumView.getNavHBox().getChildren().get(i);
@@ -174,12 +192,13 @@ public class MainApp extends Application {
                         @Override
                         public void handle(javafx.scene.input.MouseEvent event) {
                             rootPane.getChildren().clear();
-                            rootPane.getChildren().add(homeView.getMainLayout());
+                            rootPane.getChildren().add(createHomeScrollPane(homeView));
                         }
                     });
                 }
             }
         }
+        
         for (int i = 0; i < articlesView.getNavHBox().getChildren().size(); i++) {
             if (articlesView.getNavHBox().getChildren().get(i) instanceof Button) {
                 Button navButton = (Button) articlesView.getNavHBox().getChildren().get(i);
@@ -204,7 +223,7 @@ public class MainApp extends Application {
                         @Override
                         public void handle(javafx.scene.input.MouseEvent event) {
                             rootPane.getChildren().clear();
-                            rootPane.getChildren().add(homeView.getMainLayout());
+                            rootPane.getChildren().add(createHomeScrollPane(homeView));
                         }
                     });
                 }
@@ -235,6 +254,7 @@ public class MainApp extends Application {
             }
         }
     }
+    
 
     public static void main(String[] args) {
         launch(args);
